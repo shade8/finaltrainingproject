@@ -16,49 +16,12 @@ namespace UserAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<User>>> GetUsers()
+        [HttpGet("checkusername/{username}")]
+        public async Task<IActionResult> CheckUsernameExists(string username)
         {
-            return Ok(await _context.Users.ToListAsync());
+            var userExists = await _context.Users.AnyAsync(u => u.Username == username);
+            return Ok(userExists);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<List<User>>> CreateUser(User user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Users.ToListAsync());
-        }
-
-        [HttpPut]
-        public async Task<ActionResult<List<User>>> UpdateUser(User user)
-        {
-            var dbUser = await _context.Users.FindAsync(user.Id);
-            if (dbUser == null)
-                return BadRequest("User not found.");
-
-            dbUser.Name = user.Name;
-            dbUser.FirstName = user.FirstName;
-            dbUser.LastName = user.LastName;
-            dbUser.Place = user.Place;
-
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Users.ToListAsync());
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<List<User>>> DeleteUser(int id)
-        {
-            var dbUser = await _context.Users.FindAsync(id);
-            if (dbUser == null)
-                return BadRequest("User not found.");
-
-            _context.Users.Remove(dbUser);
-            await _context.SaveChangesAsync();
-
-            return Ok(await _context.Users.ToListAsync());
-        }
     }
 }

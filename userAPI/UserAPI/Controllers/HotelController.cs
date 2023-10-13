@@ -7,11 +7,11 @@ namespace UserAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class HotelController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public UserController(DataContext context)
+        public HotelController(DataContext context)
         {
             _context = context;
         }
