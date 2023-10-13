@@ -2194,11 +2194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\viswatejak\\Desktop\\finalproj\\userAPI\\UserAPI\\UserAPI.csproj",
+      "projectUniqueName": "C:\\Users\\viswatejak\\desktop\\user_project-main\\userAPI\\UserAPI\\UserAPI.csproj",
       "projectName": "UserAPI",
-      "projectPath": "C:\\Users\\viswatejak\\Desktop\\finalproj\\userAPI\\UserAPI\\UserAPI.csproj",
+      "projectPath": "C:\\Users\\viswatejak\\desktop\\user_project-main\\userAPI\\UserAPI\\UserAPI.csproj",
       "packagesPath": "C:\\Users\\viswatejak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\viswatejak\\Desktop\\finalproj\\userAPI\\UserAPI\\obj\\",
+      "outputPath": "C:\\Users\\viswatejak\\desktop\\user_project-main\\userAPI\\UserAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\viswatejak\\AppData\\Roaming\\NuGet\\NuGet.Config",
