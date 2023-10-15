@@ -1,21 +1,21 @@
 <div class="container">
   <h2>Booking Details</h2>
-  <form (ngSubmit)="confirmBooking()">
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="bookingDetails.name" class="form-control" required>
+      <input type="text" id="name" name="name" [(ngModel)]="name" class="form-control" required>
 
       <label for="hotel">Hotel:</label>
-      <input type="text" id="hotel" name="hotel" [(ngModel)]="bookingDetails.hotel" class="form-control" required>
+      <input type="text" id="hotel" name="hotel" [(ngModel)]="hotel" class="form-control" required>
 
       <label for="duration">Duration:</label>
-      <input type="text" id="duration" name="duration" [(ngModel)]="bookingDetails.duration" class="form-control" required>
+      <input type="text" id="duration" name="duration" [(ngModel)]="duration" class="form-control" required>
 
       <label for="phoneno">Phoneno:</label>
-      <input type="text" id="phoneno" name="phoneno" [(ngModel)]="bookingDetails.phoneno" class="form-control" required>
+      <input type="text" id="phoneno" name="phoneno" [(ngModel)]="phoneNo" class="form-control" required>
 
       <label for="emailid">Emailid:</label>
-      <input type="text" id="emailid" name="emailid" [(ngModel)]="bookingDetails.emailid" class="form-control" required>
+      <input type="text" id="emailid" name="emailid" [(ngModel)]="emailId" class="form-control" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Confirm Booking</button>

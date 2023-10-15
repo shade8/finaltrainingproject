@@ -2,6 +2,6 @@ export interface BookingDetails {
   name: string;
   hotel: string;
   duration: string;
-  phoneno: string;
-  emailid:string;
+  phoneNo: string;
+  emailId:string;
 }

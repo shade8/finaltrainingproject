@@ -9,7 +9,7 @@ import { DispensableComponent } from './dispensable/dispensable.component';
 
 
 const routes: Routes = [
-  { path: '', component: SignupComponent },
+  { path: '', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'hotels', component: HotelListComponent },

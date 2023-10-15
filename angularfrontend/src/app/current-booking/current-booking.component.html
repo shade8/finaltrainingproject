@@ -1,11 +1,11 @@
 <div class="booking-container">
   <h2>Your Booking Information</h2>
-  <div *ngFor="let booking of bookingService.savedBookingDetails" class="booking-card">
+  <div *ngFor="let booking of bookings" class="booking-card">
     <div><strong>Name:</strong> {{ booking.name }}</div>
     <div><strong>Hotel:</strong> {{ booking.hotel }}</div>
     <div><strong>Duration:</strong> {{ booking.duration }}</div>
-    <div><strong>Phone Number:</strong> {{ booking.phoneno }}</div>
-    <div><strong>Email ID:</strong> {{ booking.emailid }}</div>
+    <div><strong>Phone Number:</strong> {{ booking.phoneNo }}</div>
+    <div><strong>Email ID:</strong> {{ booking.emailId }}</div>
   </div>
 </div>
 
