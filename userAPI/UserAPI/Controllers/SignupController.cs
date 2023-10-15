@@ -11,16 +11,12 @@ namespace UserAPI.Controllers
     {
         private readonly DataContext _context;
 
-        public UserController(DataContext context)
+        public SignupController(DataContext context)
         {
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<User>>> GetUsers()
-        {
-            return Ok(await _context.Users.ToListAsync());
-        }
+
 
         [HttpPost]
         public async Task<ActionResult<List<User>>> CreateUser(User user)
@@ -28,7 +24,7 @@ namespace UserAPI.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return Ok(await _context.Users.ToListAsync());
+            return Ok(user);
         } 
     }
 }

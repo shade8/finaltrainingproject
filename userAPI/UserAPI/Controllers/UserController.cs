@@ -16,11 +16,23 @@ namespace UserAPI.Controllers
             _context = context;
         }
 
-        [HttpGet("checkusername/{username}")]
-        public async Task<IActionResult> CheckUsernameExists(string username)
+        [HttpPost("checkuser")]
+        public async Task<IActionResult> CheckUser([FromBody] LoginRequest loginRequest)
         {
-            var userExists = await _context.Users.AnyAsync(u => u.Username == username);
-            return Ok(userExists);
+            string username = loginRequest.Username;
+            string password = loginRequest.Password;
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Name == username && u.Password == password);
+
+            if (user != null)
+            {
+                
+                return Ok(user);
+            }
+
+            
+            return NotFound();
         }
 
     }
